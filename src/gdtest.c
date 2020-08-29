@@ -35,12 +35,12 @@ main (int argc, char **argv)
 	int foreground;
 	int i;
 	if (argc != 2) {
-		fprintf(stderr, "Usage: gdtest filename.png\n");
+		printf("Usage: gdtest filename.png\n");
 		exit (1);
 	}
 	in = fopen (argv[1], "rb");
 	if (!in) {
-		fprintf(stderr, "Input file does not exist!\n");
+		printf("Input file does not exist!\n");
 		exit (1);
 	}
 	im = gdImageCreateFromPng (in);
@@ -50,11 +50,11 @@ main (int argc, char **argv)
 
 	fclose (in);
 	if (!im) {
-		fprintf(stderr, "gdImageCreateFromPng failed.\n");
+		printf("gdImageCreateFromPng failed.\n");
                	exit (1);
 	}
 	if (!ref) {
-		fprintf(stderr, "gdImageCreateFromPng failed.\n");
+		printf("gdImageCreateFromPng failed.\n");
                	exit (1);
 	}
 
